@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url("./fonts/Quicksand-VariableFont_wght.ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+html {
+  font-family: 'Quicksand';
+  color: #000;
+}
+
+body{
+  background: #263238;
+}
+
+
+.App {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+
+ 
+}
+
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 960px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ecf8ff;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem 0 0.5rem;
+  color: #ecf8ff;
+}
+
+h4 {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: -16px 0 16px;
+  color: #fff;
+}
+
+.fileInput {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.75rem 2rem;
+  border-radius: 0.375rem;
+  background: #ff5e1f;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+
+.configTitle {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 0 0 12px;
+}
+
+.configTitle h2 {
+  flex: 1;
+  margin: 0;
+}
+
+.configTitle button {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.fields {
+  box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+  padding: 0px 8px 12px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.field {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 12px 0 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.field.isDragged {
+  background: #ecf8ff;
+}
+
+.field .bar {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field .bar div {
+  width: 100%;
+  height: 3px;
+  background: #03121a;
+  opacity: 0.5;
+  transition: 0.25s ease all;
+}
+
+.field:hover .bar div,
+.field.isDragged .bar div {
+  opacity: 1;
+  transition: 0.25s ease all;
+}
+
+.field span {
+  width: 24px;
+  margin: 0 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.field input {
+  flex: 1;
+  margin: 0 16px;
+  background: #f2f3f3;
+  border: none;
+  height: 24px;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.field button {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1;
+  color: #687176;
+}
+
+.field .primaryToggle {
+  background: #cdd0d1;
+  margin: 0 8px 0 0;
+}
+
+.field .primaryToggle:disabled {
+  background: #0264c8;
+  color: #fff;
+}
+
+.field .shouldMerge {
+  background: #cdd0d1;
+  margin: 0 8px 0 0;
+}
+
+.field .shouldMerge.active {
+  background: #ffdc00;
+  color: #03121a;
+}
+
+.field .delete {
+  background: #f4555a;
+  color: #fff;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.field .delete:disabled {
+  background: #cdd0d1;
+  color: #687176;
+}
+
+.addField {
+  width: 100%;
+  margin: 16px 0 24px;
+  background: #0bc175;
+}
+
+.invalidReason {
+  width: 100%;
+  margin: 0 0 8px;
+  color: white;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.invalidReason > button:disabled {  
+  background:#f4555a;
+  transition: all 0.25s ease;
+}
+
+.download {
+  width: 100%;
+}
